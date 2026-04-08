@@ -1,4 +1,4 @@
-# Interactive Calendar Challenge
+# Interactive Calendar
 
 A wall-calendar inspired monthly planner built with Next.js. This submission takes the visual direction from the challenge prompt and turns it into a polished, interactive frontend experience with seasonal imagery, responsive note-taking, and a more product-focused presentation.
 
