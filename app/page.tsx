@@ -31,6 +31,7 @@ type NoteMode = "single" | "multiple";
 type ThemeMode = "light" | "dark";
 
 const STORAGE_KEY = "calendar-wall-notes";
+const repoBasePath = process.env.GITHUB_PAGES === "true" ? "/Interactive_Calendar-" : "";
 const monthNames = [
   "January",
   "February",
@@ -47,6 +48,11 @@ const monthNames = [
 ];
 const weekdayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const THEME_STORAGE_KEY = "calendar-theme-mode";
+
+function assetPath(path: string) {
+  return `${repoBasePath}${path}`;
+}
+
 const monthArtwork: MonthArtwork[] = [
   {
     month: "January",
@@ -55,7 +61,7 @@ const monthArtwork: MonthArtwork[] = [
     photographer: "Anthony's astro",
     sourceLabel: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Aurora_mountain.jpg",
-    localImage: "/months/jan.jpg"
+    localImage: assetPath("/months/jan.jpg")
   },
   {
     month: "February",
@@ -65,7 +71,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Sunrise_in_the_winter_forest.jpg",
-    localImage: "/months/feb.jpg"
+    localImage: assetPath("/months/feb.jpg")
   },
   {
     month: "March",
@@ -74,7 +80,7 @@ const monthArtwork: MonthArtwork[] = [
     photographer: "Richard Hierner",
     sourceLabel: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Spring_forest.jpg",
-    localImage: "/months/mar.jpg"
+    localImage: assetPath("/months/mar.jpg")
   },
   {
     month: "April",
@@ -84,7 +90,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:April_Blossoms_-_Japanese_cherry_tree_in_Prospect_Park.jpg",
-    localImage: "/months/apr.jpg"
+    localImage: assetPath("/months/apr.jpg")
   },
   {
     month: "May",
@@ -93,7 +99,7 @@ const monthArtwork: MonthArtwork[] = [
     photographer: "Shubham",
     sourceLabel: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Lake_Mountain.jpg",
-    localImage: "/months/may.jpg"
+    localImage: assetPath("/months/may.jpg")
   },
   {
     month: "June",
@@ -103,7 +109,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Forest_lake_(3219887761).jpg",
-    localImage: "/months/jun.jpg"
+    localImage: assetPath("/months/jun.jpg")
   },
   {
     month: "July",
@@ -113,7 +119,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Summer_meadow_(geograph_7243101).jpg",
-    localImage: "/months/jul.jpg"
+    localImage: assetPath("/months/jul.jpg")
   },
   {
     month: "August",
@@ -123,7 +129,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:%D0%AE%D0%B6%D0%BD%D0%B0%D1%8F_%D0%BA%D0%BE%D1%81%D0%B0_%D0%A2%D0%B5%D0%BB%D0%B5%D1%86%D0%BA%D0%BE%D0%B5_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE.jpg",
-    localImage: "/months/aug.jpg"
+    localImage: assetPath("/months/aug.jpg")
   },
   {
     month: "September",
@@ -133,7 +139,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Landscape_with_the_meadow.jpg",
-    localImage: "/months/sep.jpg"
+    localImage: assetPath("/months/sep.jpg")
   },
   {
     month: "October",
@@ -143,7 +149,7 @@ const monthArtwork: MonthArtwork[] = [
     sourceLabel: "Wikimedia Commons",
     sourceUrl:
       "https://commons.wikimedia.org/wiki/File:Autumn_forest_by_the_lake_(52580612707).jpg",
-    localImage: "/months/oct.jpg"
+    localImage: assetPath("/months/oct.jpg")
   },
   {
     month: "November",
@@ -152,7 +158,7 @@ const monthArtwork: MonthArtwork[] = [
     photographer: "kishjar?",
     sourceLabel: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Autumn_(51558088432).jpg",
-    localImage: "/months/nov.jpg"
+    localImage: assetPath("/months/nov.jpg")
   },
   {
     month: "December",
@@ -161,7 +167,7 @@ const monthArtwork: MonthArtwork[] = [
     photographer: "Muhammad Ali",
     sourceLabel: "Wikimedia Commons",
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Snow_and_Mountains.jpg",
-    localImage: "/months/dec.jpg"
+    localImage: assetPath("/months/dec.jpg")
   }
 ];
 
