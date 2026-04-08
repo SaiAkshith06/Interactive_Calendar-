@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:github": "GITHUB_PAGES=true next build",
+    "build:github": "NEXT_PUBLIC_BASE_PATH=/Interactive_Calendar- GITHUB_PAGES=true next build",
     "start": "next start",
     "lint": "next lint"
   },
